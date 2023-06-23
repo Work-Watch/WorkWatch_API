@@ -14,8 +14,3 @@ RUN npm install
 
 #Copiar codigo fuente
 COPY . .
-
-EXPOSE 3000
-
-#Ejecutar la app
-CMD ["npm","run","start"]
