@@ -10,7 +10,7 @@ const passport = require('passport');
 const baseRouter = Router();
 
 baseRouter.use('/user', passport.authenticate("jwt", { session: false }), userRouter);
-baseRouter.use('/rol', rolRouter);
+baseRouter.use('/rol', passport.authenticate("jwt", { session: false }), rolRouter);
 baseRouter.use('/team', passport.authenticate("jwt", { session: false }), teamRouter);
 baseRouter.use('/task', passport.authenticate("jwt", { session: false }), taskRouter);
 baseRouter.use('/userteam', passport.authenticate("jwt", { session: false }), UserTeamRouter);
