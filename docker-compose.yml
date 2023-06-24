@@ -11,10 +11,10 @@ services:
     ports:
       - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD:
-      MYSQL_DATABASE: 
-      MYSQL_USER: 
-      MYSQL_PASSWORD: 
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: workWatch
+      MYSQL_USER: noe
+      MYSQL_PASSWORD: 1234
     volumes:
       - mysql-data:/var/lib/mysql
 volumes:
