@@ -14,3 +14,5 @@ RUN npm install
 
 #Copiar codigo fuente
 COPY . .
+
+CMD ["npm","run","start"]
