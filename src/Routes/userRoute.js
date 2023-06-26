@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { getAllUser, createUser, updateUser, deleteUser, getOneUser, getFindName, getOwn, isCreatedCode, isVerifiedCode} = require('../controllers/user.controllers');
+const { getAllUser, createUser, updateUser, deleteUser, getOneUser, getFindName, getOwn, isCreatedCode } = require('../controllers/user.controllers');
 const {authByRoleId} = require('../middlewares/authorize');
 
 const userRouter = Router();
@@ -12,6 +12,5 @@ userRouter.delete('/delete/:id', deleteUser);
 userRouter.get('/getOne/:id', getOneUser);
 userRouter.get('/getName', getFindName);
 userRouter.post('/createCode', isCreatedCode);
-userRouter.post('/verificationCode', isVerifiedCode)
 
 module.exports = userRouter;
