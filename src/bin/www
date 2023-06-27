@@ -10,7 +10,7 @@ dontenv.config();
 
 var app = require('../app');
 var debug = require('debug')('api-workwacht:server');
-var https = require('https');
+var http = require('http');
 
 /**
  * Get port from environment and store in Express.
@@ -26,7 +26,7 @@ debug('Server started on port: ' + port);
  * Create HTTP server.
  */
 
-var server = https.createServer(app);
+var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
