@@ -1,6 +1,8 @@
 const User = require('../models/user.model');
 const Rol = require('../models/rol.model');
 
+// se desestructura el objeto user de la solicitud para obtener
+
 exports.authByRoleId = async function (req, res, next) {
     try {
       const { user } = req;
@@ -15,9 +17,8 @@ exports.authByRoleId = async function (req, res, next) {
     
       // El usuario tiene el rol requerido, permitir el acceso
       next();
+
     } catch (error) {
       return res.status(500).json({ message: 'Error de servidor' + error });
     }
-  };
-
-  exports.authTokenVerification
+};
