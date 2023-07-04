@@ -46,7 +46,7 @@ exports.register = async (req, res) => {
         const { name, lastName, email, password, confirmPassword, company, phone, idRol } = req.body;
 
         // Verificar si hay campos vacíos
-        if (!name || !lastName || !email || !password || !confirmPassword || !company || !phone || !idRol) 
+        if (!name || !lastName || !email || !password || !confirmPassword || !company || !phone) 
             return res.status(400).json({ message: 'Todos los campos son obligatorios' });
 
         // verificar si el correo a sido utilizado
