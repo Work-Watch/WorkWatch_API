@@ -16,7 +16,6 @@ Rol.init({
     allowNull: false
   }
 }, {
-  timestamps: false,
   sequelize, // We need to pass the connection instance
   modelName: 'Rol' // We need to choose the model name
 });
