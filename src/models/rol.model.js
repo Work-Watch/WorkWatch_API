@@ -21,15 +21,6 @@ Rol.init({
   modelName: 'Rol' // We need to choose the model name
 });
 
-// Define a hook to create roles after the model is synchronized with the database
-Rol.afterSync((options) => {
-  // Create the roles
-  Rol.bulkCreate([
-    { rol: 'administrador' },
-    { rol: 'empleado' },
-  ]);
-});
-
 Rol.hasOne(User, {
   foreignKey: 'idRol',
   sourceKey: 'idRol'
