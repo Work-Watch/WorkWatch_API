@@ -1,6 +1,6 @@
-const { Sequelize, DataTypes, Model, where } = require('sequelize');
+const { Sequelize, DataTypes, Model } = require('sequelize');
 const sequelize = require('../config/db');
-const User = require('./user.model');
+const User = require('./user.model')
 
 class Rol extends Model {}
 
@@ -13,9 +13,11 @@ Rol.init({
   },
   rol: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
+    defaultValue: 'administrador'
   }
 }, {
+  // Other model options go here
   sequelize, // We need to pass the connection instance
   modelName: 'Rol' // We need to choose the model name
 });
@@ -29,21 +31,6 @@ User.belongsTo(Rol, {
   foreignKey: 'idRol',
   targetKey: 'idRol'
 });
-
-const createRol = async() => {
-  
-  const administrador = await Rol.findOne({ where: { rol: 'administrador'} });
-  const empleado = await Rol.findOne({ where: { rol: 'empleado'} })
-  
-  if (!administrador)
-    await Rol.create({rol: "administrador"});
-
-  if(!empleado)
-    await Rol.create({rol: "empleado"});
-
-}
-
-createRol();
 
 module.exports = Rol;
 // the defined model is the class itself
