@@ -13,8 +13,7 @@ Rol.init({
   },
   rol: {
     type: DataTypes.STRING,
-    allowNull: false,
-    defaultValue: 'administrador'
+    allowNull: false
   }
 }, {
   // Other model options go here
