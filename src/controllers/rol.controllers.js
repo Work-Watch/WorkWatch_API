@@ -24,7 +24,7 @@ exports.getAllRol = async(req, res) => {
 }
 
 // crear nuevos rol
-exports.createRol = async(rq, res) => {
+exports.createRol = async(req, res) => {
     const administrador = await Rol.create({
         rol: "administrador"
     });
