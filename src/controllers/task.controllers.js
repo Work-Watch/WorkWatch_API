@@ -11,7 +11,7 @@ exports.getAllTask = async (req, res) => {
        const page = req.query.page || 1; // Página actual, valor predeterminado: 1
        const limit = req.query.limit || 10; // Elementos por página, valor predeterminado: 10
        const offset = (page - 1) * limit;  // Calcular el desplazamiento (offset) según la página actual y el límite
-       const count = await User.count(); // Conteo total de datos
+       const count = await Task.count(); // Conteo total de datos
  
 
       const task = await Task.findAll({ include: Team, limit: limit, offset: offset });
