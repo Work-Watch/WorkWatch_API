@@ -40,7 +40,7 @@ exports.createTask = async (req, res) => {
 
     const { task, latitude, longitude, hourStart, hourFinal, date, idTeam } = req.body;
 
-    if(!task || !latitude || !longitude || !hourStart || !hourFinal || !date || !idTeam)
+    if(!task || !latitude || !longitude || !hourStart || !date || !idTeam)
       return res.status(400).json({ message: 'Todos los campos son obligatorios' });
 
     await Task.create({ task, latitude, longitude, hourStart, hourFinal, date, idTeam });

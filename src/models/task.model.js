@@ -22,13 +22,13 @@ Task.init ({
         type: DataTypes.DECIMAL,
         allowNull: false
     },
-    hourStar: {
+    hourStart: {
         type: DataTypes.TIME,
         allowNull: false
     },
     hourFinal: {
         type: DataTypes.TIME,
-        allowNull: false
+        allowNull: true
     },
     date: {
         type: DataTypes.DATE,
