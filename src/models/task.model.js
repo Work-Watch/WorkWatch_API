@@ -15,11 +15,11 @@ Task.init ({
         allowNull: false
     },
     latitude: {
-        type: DataTypes.FLOAT,
+        type: DataTypes.FLOAT(11),
         allowNull: false
     },
     longitude: {
-        type: DataTypes.FLOAT,
+        type: DataTypes.FLOAT(11),
         allowNull: false
     },
     hourStart: {
