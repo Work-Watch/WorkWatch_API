@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Base: migraciones a la basde de datos
 async function base() {
-  await sequelize.sync({force: true});
+  await sequelize.sync({force: false});
 }
 
 base();
