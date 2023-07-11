@@ -15,11 +15,11 @@ Task.init ({
         allowNull: false
     },
     latitude: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DECIMAL,
         allowNull: false
     },
     longitude: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DECIMAL,
         allowNull: false
     },
     hourStar: {
